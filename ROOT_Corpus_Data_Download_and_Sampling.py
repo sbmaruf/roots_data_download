@@ -926,7 +926,7 @@ for line in soup.text.split("\n"):
 roots_split_list = [] 
 for data_signature in tqdm.tqdm(address):
     try:
-        dataset = datasets.load_dataset(data_signature, use_auth_token="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")
+        dataset = datasets.load_dataset(data_signature, use_auth_token="-")
         roots_split_list.append(dataset)
     except:
         print("Failed", data_signature)
